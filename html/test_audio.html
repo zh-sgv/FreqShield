@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreqShield - Audio Samples</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 40px 0;
+            border-bottom: 2px solid #eee;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .header h2 {
+            font-size: 1.5em;
+            font-weight: 300;
+            margin-bottom: 20px;
+            color: #7f8c8d;
+        }
+        
+        .abstract {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: justify;
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+        }
+        
+        .section {
+            margin: 60px 0;
+        }
+        
+        .section h3 {
+            font-size: 1.8em;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        .audio-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .audio-table th {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 15px 10px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1em;
+            border-bottom: 2px solid #1a252f;
+        }
+        
+        .audio-table td {
+            padding: 25px 10px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+            vertical-align: middle;
+        }
+        
+        .audio-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .audio-table tr:hover {
+            background-color: #e3f2fd;
+        }
+        
+        .model-name {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 1.1em;
+            min-width: 120px;
+        }
+        
+        .sample-type {
+            font-weight: 500;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        
+        audio {
+            width: 280px;
+            height: 45px;
+        }
+        
+        .no-audio {
+            color: #bdc3c7;
+            font-style: italic;
+        }
+        
+        .description {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            border-radius: 4px;
+        }
+        
+        .description p {
+            margin: 0;
+            font-size: 1.1em;
+            color: #555;
+        }
+        
+        .text-samples {
+            margin: 30px 0;
+            padding: 25px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .text-samples h4 {
+            margin: 0 0 20px 0;
+            color: #2c3e50;
+            font-size: 1.3em;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 8px;
+        }
+        
+        .text-item {
+            margin: 15px 0;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .text-item strong {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .text-note {
+            color: #7f8c8d;
+            font-style: italic;
+            font-size: 0.9em;
+            display: block;
+            margin-top: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .audio-table {
+                font-size: 0.9em;
+            }
+            
+            audio {
+                width: 220px;
+            }
+            
+            .text-samples {
+                padding: 15px;
+            }
+            
+            .text-item {
+                padding: 10px;
+            }
+            
+            .text-note {
+                font-size: 0.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>FreqShield</h1>
+            <h2>Rethinking Voice Cloning Defense via Information Subtraction</h2>
+            <div class="abstract">
+                <p>This page provides interactive audio samples for our paper, "FreqShield: Rethinking Voice Cloning Defense via Information Subtraction." We demonstrate how our novel signal-processing defense effectively protects a user's voice against several state-of-the-art voice cloning models. Use the players below to hear the original audio, the audio after being protected by FreqShield, and the resulting low-quality cloned output.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Original and Reference Audio Samples</h3>
+            <div class="description">
+                <p>Below are the audio files used in our experiments. The "Original Audio" is the source voice we aim to protect. The "Reference Audio" files are the outputs from each TTS model synthesizing the reference texts with the original speaker's voice.</p>
+            </div>
+            
+            <div class="text-samples">
+                <h4>Reference Text Content</h4>
+                <div class="text-item">
+                    <strong>Reference 1:</strong> "The quick brown fox jumps over the lazy dog."
+                </div>
+                <div class="text-item">
+                    <strong>Reference 2:</strong> "Twelve tiny twins twirled twelve twigs toward the twisting tower."
+                </div>
+                <div class="text-item">
+                    <strong>Reference 3:</strong> "Despite the initial challenges and numerous setbacks, the team persevered and ultimately achieved a result that exceeded all expectations."
+                </div>
+            </div>
+
+            <table class="audio-table">
+                <thead>
+                    <tr>
+                        <th>Model</th>
+                        <th>Reference 1</th>
+                        <th>Reference 2</th>
+                        <th>Reference 3</th>
+                        <th>Original Audio</th>
+                        <th>Protected Audio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="model-name">CosyVoice2</td>
+                        <td><audio controls><source src="samples/cosyvoice2/refer_1.wav" type="audio/wav"></audio></td>
+                        <td><audio controls><source src="samples/cosyvoice2/refer_2.wav" type="audio/wav"></audio></td>
+                        <td><audio controls><source src="samples/cosyvoice2/refer_3.wav" type="audio/wav"></audio></td>
+                        <td><audio controls><source src="samples/cosyvoice2/1272-141231-0017.flac" type="audio/flac"></audio></td>
+                        <td><audio controls><source src="samples/cosyvoice2/4_950_1272-141231-0017_normalized.flac" type="audio/flac"></audio></td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="model-name">F5-TTS</td>
+                        <td><audio controls><source src="samples/f5/refer_1.wav" type="audio/wav"></audio></td>
+                        <td><audio controls><source src="samples/f5/refer_2.wav" type="audio/wav"></audio></td>
+                        <td><audio controls><source src="samples/f5/refer_3.wav" type="audio/wav"></audio></td>
+                        <td><audio controls><source src="samples/f5/3536-23268-0027.flac" type="audio/flac"></audio></td>
+                        <td><audio controls><source src="samples/f5/4_950_3536-23268-0027_normalized.flac" type="audio/flac"></audio></td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="model-name">IndexTTS</td>
+                        <td><audio controls><source src="samples/indextts/refer_1.wav" type="audio/wav"></audio></td>
+                        <td><audio controls><source src="samples/indextts/refer_2.wav" type="audio/wav"></audio></td>
+                        <td><audio controls><source src="samples/indextts/refer_3.wav" type="audio/wav"></audio></td>
+                        <td><audio controls><source src="samples/indextts/174-50561-0009.flac" type="audio/flac"></audio></td>
+                        <td><audio controls><source src="samples/indextts/4_950_174-50561-0009_normalized.flac" type="audio/flac"></audio></td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="model-name">MinMax</td>
+                        <td><audio controls><source src="samples/minmax/refer_1.mp3" type="audio/mpeg"></audio></td>
+                        <td><audio controls><source src="samples/minmax/refer_2.mp3" type="audio/mpeg"></audio></td>
+                        <td><audio controls><source src="samples/minmax/refer_3.mp3" type="audio/mpeg"></audio></td>
+                        <td><audio controls><source src="samples/minmax/2412-153954-0015.wav" type="audio/wav"></audio></td>
+                        <td><audio controls><source src="samples/minmax/4_950_2412-153954-0015_normalized.wav" type="audio/wav"></audio></td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="model-name">PAPLA</td>
+                        <td><audio controls><source src="samples/papla/refer_1.mp3" type="audio/mpeg"></audio></td>
+                        <td><audio controls><source src="samples/papla/refer_2.mp3" type="audio/mpeg"></audio></td>
+                        <td><audio controls><source src="samples/papla/refer_3.mp3" type="audio/mpeg"></audio></td>
+                        <td><audio controls><source src="samples/papla/1993-147964-0004_protected.flac" type="audio/flac"></audio></td>
+                        <td><audio controls><source src="samples/papla/4_950_1993-147964-0004_normalized.flac" type="audio/flac"></audio></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h3>About FreqShield</h3>
+            <div class="description">
+                <p><strong>FreqShield</strong> is a novel audio protection system that safeguards your voice from malicious cloning. Instead of adding complex noise or perturbations, our system is based on a paradigm we call "Information Subtraction." It employs a fundamental signal processing technique—a high-pass filter—to strategically remove the low-frequency cues that voice cloning models depend on, while preserving the natural sound quality for human listeners.
+
+</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add some interactive features
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add loading state for audio elements
+            const audioElements = document.querySelectorAll('audio');
+            audioElements.forEach(audio => {
+                audio.addEventListener('loadstart', function() {
+                    this.style.opacity = '0.6';
+                });
+                audio.addEventListener('canplay', function() {
+                    this.style.opacity = '1';
+                });
+                audio.addEventListener('error', function() {
+                    this.style.opacity = '0.3';
+                    console.warn('Failed to load audio:', this.src);
+                });
+            });
+
+            // Add smooth scrolling for better UX
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
