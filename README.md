@@ -5,7 +5,7 @@ This repository contains audio samples for the paper "FreqShield: Rethinking Voi
 
 ## Demo Page
 
-🎵 **Interactive Audio Demo**: Visit our [demo page](URL_TO_BE_FILLED) to listen to and compare audio samples from different TTS models and their protection effects.
+🎵 **Interactive Audio Demo**: Visit our [demo page](https://zh-sgv.github.io/FreqShield/) to listen to and compare audio samples from different TTS models and their protection effects.
 
 ## Directory Structure
 
