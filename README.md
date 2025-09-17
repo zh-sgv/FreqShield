@@ -16,7 +16,7 @@ Each subfolder in the `samples/` directory represents a different TTS (Text-to-S
 - `indextts/`
 - `minmax/`
 - `papla/`
-P
+
 Each subfolder contains the following types of files:
 
 
